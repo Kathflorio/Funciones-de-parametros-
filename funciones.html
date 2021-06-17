@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Parámetros de funciones</title>
+    </head>
+    <body>
+        <script>
+           //const yourUrl = Window.location.search;
+           const yourUrl = "https://www.google.com/doodles?utm_source=google&utm_medium=cpc&utm_campaign=Departamentos%20en%20venta&utm_term=Apartamentos%20Playa%20del%20Carmen" 
+           const urlParams = new URLSearchParams(yourUrl);
+           const campaign = urlParams.get('utm_campaing');
+           const adset = urlParams.get('utm_medium');
+           const ad = null;
+           const form = urlParams.get('utm_source');
+           const cost  = 0;
+           const sales = 0;
+           const revenue = 0;
+           const utm_term = urlParams.get('utm_term');
+           const utm_content = null;
+           const campaign_id = null;
+           const miscellaneous = { "marketing":{
+            "campaign": campaign,
+            "adset": adset,
+            "ad": ad,
+            "form": form,
+            "cost": cost,
+            "sales": sales,
+            "revenue": revenue,
+            "utm_term": utm_term,
+            "utm_content": utm_content,
+            "campaign_id": campaign_id
+        }}
+        document.body.innerHTML = JSON.stringify(miscellaneous);
+       </script> 
+
+    </body>
+    
+</html>
